@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct MainMenuView: View {
+    @ObservedObject private var authManager = AuthManager.shared
+
     @State private var isPlaying = false
     @State private var showLeaderboard = false
     @State private var topScore: Int?
@@ -16,6 +18,11 @@ struct MainMenuView: View {
                 Text("TiltRunner")
                     .font(.system(size: 44, weight: .heavy, design: .rounded))
                     .foregroundStyle(.white)
+
+                if let username = authManager.username {
+                    Text("Signed in as \(username)")
+                        .foregroundStyle(.white.opacity(0.7))
+                }
 
                 if let topScore {
                     Text("Top score: \(topScore)")
@@ -38,6 +45,12 @@ struct MainMenuView: View {
                 }
                 .buttonStyle(.bordered)
                 .tint(.white)
+
+                Button("Log Out") {
+                    authManager.logOut()
+                }
+                .buttonStyle(.bordered)
+                .tint(.white.opacity(0.6))
 
                 Spacer()
             }

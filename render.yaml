@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tiltrunner-server
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: FIREBASE_SERVICE_ACCOUNT_BASE64
+        sync: false

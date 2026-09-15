@@ -1,15 +1,16 @@
 import SwiftUI
-import FirebaseCore
 
 @main
 struct TiltRunnerApp: App {
-    init() {
-        FirebaseApp.configure()
-    }
+    @ObservedObject private var authManager = AuthManager.shared
 
     var body: some Scene {
         WindowGroup {
-            MainMenuView()
+            if authManager.isLoggedIn {
+                MainMenuView()
+            } else {
+                LoginView()
+            }
         }
     }
 }

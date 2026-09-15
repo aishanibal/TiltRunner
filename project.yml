@@ -5,11 +5,6 @@ options:
     iOS: "17.0"
   createIntermediateGroups: true
 
-packages:
-  FirebaseFirestore:
-    url: https://github.com/firebase/firebase-ios-sdk
-    from: 11.0.0
-
 targets:
   TiltRunner:
     type: application
@@ -19,7 +14,6 @@ targets:
       - path: TiltRunner
     resources:
       - path: TiltRunner/Resources/Assets.xcassets
-      - path: TiltRunner/Resources/GoogleService-Info.plist
     info:
       path: TiltRunner/Info.plist
       properties:
@@ -36,6 +30,3 @@ targets:
         TARGETED_DEVICE_FAMILY: "1"
         DEVELOPMENT_TEAM: ""
         CODE_SIGN_STYLE: Automatic
-    dependencies:
-      - package: FirebaseFirestore
-        product: FirebaseFirestore

@@ -2,7 +2,6 @@ import CoreMotion
 import Combine
 
 /// Wraps CMMotionManager to expose left/right steering via device roll.
-/// No Info.plist usage-description entry is required for deviceMotion.
 final class MotionManager: ObservableObject {
     @Published var roll: Double = 0
 

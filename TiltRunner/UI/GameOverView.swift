@@ -6,7 +6,6 @@ struct GameOverView: View {
     let onShowLeaderboard: () -> Void
     let onExitToMenu: () -> Void
 
-    @State private var name: String = ""
     @State private var isSubmitting = false
     @State private var didSubmit = false
     @State private var errorMessage: String?
@@ -21,32 +20,18 @@ struct GameOverView: View {
                 .font(.title2)
                 .foregroundStyle(.white.opacity(0.85))
 
-            if !didSubmit {
-                TextField("Enter your name", text: $name)
-                    .textFieldStyle(.roundedBorder)
-                    .autocorrectionDisabled()
-                    .frame(maxWidth: 240)
-
-                Button {
-                    submit()
-                } label: {
-                    if isSubmitting {
-                        ProgressView()
-                    } else {
-                        Text("Submit Score")
-                    }
-                }
-                .buttonStyle(.borderedProminent)
-                .disabled(name.trimmingCharacters(in: .whitespaces).isEmpty || isSubmitting)
-
-                if let errorMessage {
-                    Text(errorMessage)
-                        .font(.caption)
-                        .foregroundStyle(.red)
-                }
-            } else {
+            if isSubmitting {
+                ProgressView()
+            } else if didSubmit {
                 Label("Score submitted", systemImage: "checkmark.circle.fill")
                     .foregroundStyle(.green)
+            } else if let errorMessage {
+                Text(errorMessage)
+                    .font(.caption)
+                    .foregroundStyle(.red)
+                Button("Retry Submit", action: submit)
+                    .buttonStyle(.bordered)
+                    .tint(.white)
             }
 
             HStack(spacing: 16) {
@@ -62,16 +47,18 @@ struct GameOverView: View {
         .padding(32)
         .background(.black.opacity(0.75), in: RoundedRectangle(cornerRadius: 20))
         .padding()
+        .task {
+            submit()
+        }
     }
 
     private func submit() {
-        let trimmed = name.trimmingCharacters(in: .whitespaces)
-        guard !trimmed.isEmpty else { return }
+        guard let token = AuthManager.shared.token else { return }
         isSubmitting = true
         errorMessage = nil
         Task {
             do {
-                try await ScoreService.submitScore(name: trimmed, score: score)
+                try await ScoreService.submitScore(score: score, token: token)
                 isSubmitting = false
                 didSubmit = true
             } catch {

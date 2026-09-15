@@ -1,35 +1,41 @@
 import Foundation
-import FirebaseFirestore
 
-/// Reads/writes the open `scores` collection. No Firebase Auth is used —
-/// this relies on permissive Firestore security rules, which is an
-/// intentional scope decision for this assignment, not a production practice.
 enum ScoreService {
-    private static let collectionName = "scores"
+    private struct SubmitScoreRequest: Encodable {
+        let score: Int
+    }
 
-    static func submitScore(name: String, score: Int) async throws {
-        let db = Firestore.firestore()
-        try await db.collection(collectionName).addDocument(data: [
-            "name": name,
-            "score": score,
-            "timestamp": Timestamp(date: Date())
-        ])
+    private struct SubmitScoreResponse: Decodable {
+        let id: String
+    }
+
+    private struct ScoreDTO: Decodable {
+        let id: String
+        let name: String
+        let score: Int
+        let timestamp: String?
+    }
+
+    static func submitScore(score: Int, token: String) async throws {
+        let _: SubmitScoreResponse = try await APIClient.post(
+            "scores",
+            body: SubmitScoreRequest(score: score),
+            token: token
+        )
     }
 
     static func fetchTopScores(limit: Int = 10) async throws -> [Score] {
-        let db = Firestore.firestore()
-        let snapshot = try await db.collection(collectionName)
-            .order(by: "score", descending: true)
-            .limit(to: limit)
-            .getDocuments()
-
-        return snapshot.documents.map { document in
-            let data = document.data()
-            return Score(
-                id: document.documentID,
-                name: data["name"] as? String ?? "???",
-                score: data["score"] as? Int ?? 0,
-                timestamp: (data["timestamp"] as? Timestamp)?.dateValue() ?? Date()
+        let dtos: [ScoreDTO] = try await APIClient.get(
+            "scores/top",
+            queryItems: [URLQueryItem(name: "limit", value: String(limit))]
+        )
+        let formatter = ISO8601DateFormatter()
+        return dtos.map { dto in
+            Score(
+                id: dto.id,
+                name: dto.name,
+                score: dto.score,
+                timestamp: dto.timestamp.flatMap(formatter.date(from:)) ?? Date()
             )
         }
     }
