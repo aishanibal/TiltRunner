@@ -5,6 +5,7 @@ import Combine
 final class GameController: NSObject, ObservableObject, GameSceneDelegate {
     @Published var score: Int = 0
     @Published var isGameOver: Bool = false
+    @Published var isPaused: Bool = false
 
     let scene: GameScene
 
@@ -25,13 +26,27 @@ final class GameController: NSObject, ObservableObject, GameSceneDelegate {
 
     func start() {
         isGameOver = false
+        isPaused = false
         score = 0
         scene.reset()
         motionManager.start()
     }
 
+    func pause() {
+        isPaused = true
+        scene.pauseGame()
+        motionManager.stop()
+    }
+
+    func resume() {
+        isPaused = false
+        scene.resumeGame()
+        motionManager.start()
+    }
+
     func stop() {
         motionManager.stop()
+        isPaused = false
     }
 
     func gameScene(_ scene: GameScene, didUpdateScore score: Int) {
