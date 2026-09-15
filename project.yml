@@ -38,6 +38,4 @@ targets:
         CODE_SIGN_STYLE: Automatic
     dependencies:
       - package: FirebaseFirestore
-        product: FirebaseCore
-      - package: FirebaseFirestore
         product: FirebaseFirestore

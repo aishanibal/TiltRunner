@@ -11,7 +11,6 @@
 		3B77A01805774DBAD2563743 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7675B85FBADFBB27F2DB260 /* GameOverView.swift */; };
 		3B915DEB839424E8C3BE9A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAB9D3FDB56BAD8DC065514 /* Assets.xcassets */; };
 		3EAABE8ADA2B63678A2518E1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 410E29CE0796999BB3398587 /* FirebaseFirestore */; };
-		3F8A1B2C4D5E6F708192A3B4 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4A9B2C3D5E6F708192A3B4C5 /* FirebaseCore */; };
 		413736580B8F43E9FABC33D8 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA4A4AFF4D566DBAF81B7 /* MainMenuView.swift */; };
 		41B90C0A163D45A9A5F23759 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929BD329CF87DA791C9B776 /* Score.swift */; };
 		5684024C85028A8D534F9B1F /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F57FFE2759ACF17FBCE48 /* LeaderboardView.swift */; };
@@ -53,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F8A1B2C4D5E6F708192A3B4 /* FirebaseCore in Frameworks */,
 				3EAABE8ADA2B63678A2518E1 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +156,6 @@
 			);
 			name = TiltRunner;
 			packageProductDependencies = (
-				4A9B2C3D5E6F708192A3B4C5 /* FirebaseCore */,
 				410E29CE0796999BB3398587 /* FirebaseFirestore */,
 			);
 			productName = TiltRunner;
@@ -436,11 +433,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
-		};
-		4A9B2C3D5E6F708192A3B4C5 /* FirebaseCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

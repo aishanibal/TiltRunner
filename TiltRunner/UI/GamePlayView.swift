@@ -4,7 +4,6 @@ import SwiftUI
 struct GamePlayView: View {
     let onExitToMenu: () -> Void
 
-    @Environment(\.scenePhase) private var scenePhase
     @StateObject private var controller = GameController()
     @State private var showLeaderboard = false
 
@@ -15,7 +14,7 @@ struct GamePlayView: View {
 
             HUDView(
                 score: controller.score,
-                showsPauseButton: !controller.isPaused && !controller.isGameOver,
+                showPause: !controller.isPaused && !controller.isGameOver,
                 onPause: { controller.pause() }
             )
 
@@ -38,11 +37,6 @@ struct GamePlayView: View {
         .statusBarHidden()
         .onAppear { controller.start() }
         .onDisappear { controller.stop() }
-        .onChange(of: scenePhase) { _, phase in
-            if phase != .active {
-                controller.pause()
-            }
-        }
         .sheet(isPresented: $showLeaderboard) {
             LeaderboardView(onClose: { showLeaderboard = false })
         }

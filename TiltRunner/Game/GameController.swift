@@ -33,14 +33,12 @@ final class GameController: NSObject, ObservableObject, GameSceneDelegate {
     }
 
     func pause() {
-        guard !isGameOver, !isPaused else { return }
         isPaused = true
         scene.pauseGame()
         motionManager.stop()
     }
 
     func resume() {
-        guard isPaused, !isGameOver else { return }
         isPaused = false
         scene.resumeGame()
         motionManager.start()
