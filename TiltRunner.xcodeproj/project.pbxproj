@@ -11,6 +11,8 @@
 		3B77A01805774DBAD2563743 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7675B85FBADFBB27F2DB260 /* GameOverView.swift */; };
 		3B915DEB839424E8C3BE9A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAB9D3FDB56BAD8DC065514 /* Assets.xcassets */; };
 		3EAABE8ADA2B63678A2518E1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 410E29CE0796999BB3398587 /* FirebaseFirestore */; };
+		3F8A1B2C4D5E6F708192A3B4 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4A9B2C3D5E6F708192A3B4C5 /* FirebaseCore */; };
+		6C1D4E5F708192A3B4C5D6E7 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 7D2E5F608192A3B4C5D6E7F8 /* SwiftProtobuf */; };
 		413736580B8F43E9FABC33D8 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA4A4AFF4D566DBAF81B7 /* MainMenuView.swift */; };
 		41B90C0A163D45A9A5F23759 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929BD329CF87DA791C9B776 /* Score.swift */; };
 		5684024C85028A8D534F9B1F /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F57FFE2759ACF17FBCE48 /* LeaderboardView.swift */; };
@@ -52,7 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F8A1B2C4D5E6F708192A3B4 /* FirebaseCore in Frameworks */,
 				3EAABE8ADA2B63678A2518E1 /* FirebaseFirestore in Frameworks */,
+				6C1D4E5F708192A3B4C5D6E7 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +160,9 @@
 			);
 			name = TiltRunner;
 			packageProductDependencies = (
+				4A9B2C3D5E6F708192A3B4C5 /* FirebaseCore */,
 				410E29CE0796999BB3398587 /* FirebaseFirestore */,
+				7D2E5F608192A3B4C5D6E7F8 /* SwiftProtobuf */,
 			);
 			productName = TiltRunner;
 			productReference = 55F5A68459C143F124F42883 /* TiltRunner.app */;
@@ -187,6 +193,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5B0C3D4E6F708192A3B4C5D6 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 02AA6AFD3903167156435B4D /* Products */;
@@ -418,6 +425,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5B0C3D4E6F708192A3B4C5D6 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.37.0;
+			};
+		};
 		6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -433,6 +448,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		4A9B2C3D5E6F708192A3B4C5 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		7D2E5F608192A3B4C5D6E7F8 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B0C3D4E6F708192A3B4C5D6 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
