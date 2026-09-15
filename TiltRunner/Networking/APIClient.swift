@@ -1,8 +1,7 @@
 import Foundation
 
 enum APIClient {
-    // replace with the deployed server URL once it's hosted.
-    static let baseURL = URL(string: "http://localhost:3001")!
+    static let baseURL = URL(string: "https://tiltrunner.onrender.com")!
 
     static func get<Response: Decodable>(
         _ path: String,
