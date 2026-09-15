@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14EC3BF5603E77FA2AAB387C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B5FF9616BACC4317BB330 /* GameController.swift */; };
+		3B77A01805774DBAD2563743 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7675B85FBADFBB27F2DB260 /* GameOverView.swift */; };
+		3B915DEB839424E8C3BE9A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAB9D3FDB56BAD8DC065514 /* Assets.xcassets */; };
+		3EAABE8ADA2B63678A2518E1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 410E29CE0796999BB3398587 /* FirebaseFirestore */; };
+		413736580B8F43E9FABC33D8 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAA4A4AFF4D566DBAF81B7 /* MainMenuView.swift */; };
+		41B90C0A163D45A9A5F23759 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929BD329CF87DA791C9B776 /* Score.swift */; };
+		5684024C85028A8D534F9B1F /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F57FFE2759ACF17FBCE48 /* LeaderboardView.swift */; };
+		5DDE9AF16FDDA611057FCD3D /* TiltRunnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717DE87257D915623C0783B3 /* TiltRunnerApp.swift */; };
+		644CADAD8E17DDD7A775ACAD /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAF85CE69D1F6EB9A3596B /* MotionManager.swift */; };
+		69E881CE2A257A0FF61CE7B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D474F16DE5B855C6D0A1ED7 /* GoogleService-Info.plist */; };
+		6D9F502DE9EC979B22C08D62 /* ScoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBF22B529867FD9EC7F7E5 /* ScoreService.swift */; };
+		7027FF9ABE2F58F2924BD793 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B85FC359AB5976B6737A49C /* GameScene.swift */; };
+		825189BE6B25A4986A391CBF /* GameViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080B7CF7D1039EB846A76DE9 /* GameViewRepresentable.swift */; };
+		BC30F9101CAE5ADC90C1CE82 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855222DCA71C84438263B26 /* Player.swift */; };
+		CA62A70F7E2327B6969F25E2 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F264EC5532C070832FC9E2 /* Obstacle.swift */; };
+		D3D7B7179BF41EE751B21A3E /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECFA8025A2C97DA0EE80B7 /* HUDView.swift */; };
+		E61304DD51A0E138FBB15623 /* GamePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A33E1DB226C85FC9B8D4C3 /* GamePlayView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		080B7CF7D1039EB846A76DE9 /* GameViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewRepresentable.swift; sourceTree = "<group>"; };
+		45A33E1DB226C85FC9B8D4C3 /* GamePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayView.swift; sourceTree = "<group>"; };
+		4929BD329CF87DA791C9B776 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		4CBAA4A4AFF4D566DBAF81B7 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		55F5A68459C143F124F42883 /* TiltRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiltRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D474F16DE5B855C6D0A1ED7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70EBF22B529867FD9EC7F7E5 /* ScoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreService.swift; sourceTree = "<group>"; };
+		717DE87257D915623C0783B3 /* TiltRunnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltRunnerApp.swift; sourceTree = "<group>"; };
+		80FAF85CE69D1F6EB9A3596B /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		8B85FC359AB5976B6737A49C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8BAB9D3FDB56BAD8DC065514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9855222DCA71C84438263B26 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9AECFA8025A2C97DA0EE80B7 /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		C330BC4C4DF48E67376EA3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C9F264EC5532C070832FC9E2 /* Obstacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
+		D7675B85FBADFBB27F2DB260 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		E89B5FF9616BACC4317BB330 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		ED8F57FFE2759ACF17FBCE48 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3631BC7FAFC88F5C83510C92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAABE8ADA2B63678A2518E1 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02AA6AFD3903167156435B4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55F5A68459C143F124F42883 /* TiltRunner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38FE1693E7E68C83E673A143 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8BAB9D3FDB56BAD8DC065514 /* Assets.xcassets */,
+				6D474F16DE5B855C6D0A1ED7 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D44D241494B3ABE61DF19D9 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E89B5FF9616BACC4317BB330 /* GameController.swift */,
+				8B85FC359AB5976B6737A49C /* GameScene.swift */,
+				080B7CF7D1039EB846A76DE9 /* GameViewRepresentable.swift */,
+				C9F264EC5532C070832FC9E2 /* Obstacle.swift */,
+				9855222DCA71C84438263B26 /* Player.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		80E730E32399BA7BB25445F9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D7675B85FBADFBB27F2DB260 /* GameOverView.swift */,
+				45A33E1DB226C85FC9B8D4C3 /* GamePlayView.swift */,
+				9AECFA8025A2C97DA0EE80B7 /* HUDView.swift */,
+				ED8F57FFE2759ACF17FBCE48 /* LeaderboardView.swift */,
+				4CBAA4A4AFF4D566DBAF81B7 /* MainMenuView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		822EE653FA42AD173AC3CA7A /* TiltRunner */ = {
+			isa = PBXGroup;
+			children = (
+				C330BC4C4DF48E67376EA3B6 /* Info.plist */,
+				717DE87257D915623C0783B3 /* TiltRunnerApp.swift */,
+				3D44D241494B3ABE61DF19D9 /* Game */,
+				A8CF4628B0F6A12389D01F54 /* Motion */,
+				38FE1693E7E68C83E673A143 /* Resources */,
+				F7C039F0F813B4916260878B /* Scoring */,
+				80E730E32399BA7BB25445F9 /* UI */,
+			);
+			path = TiltRunner;
+			sourceTree = "<group>";
+		};
+		A8CF4628B0F6A12389D01F54 /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				80FAF85CE69D1F6EB9A3596B /* MotionManager.swift */,
+			);
+			path = Motion;
+			sourceTree = "<group>";
+		};
+		EA50DCF1D253E80E58B16254 = {
+			isa = PBXGroup;
+			children = (
+				822EE653FA42AD173AC3CA7A /* TiltRunner */,
+				02AA6AFD3903167156435B4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7C039F0F813B4916260878B /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				4929BD329CF87DA791C9B776 /* Score.swift */,
+				70EBF22B529867FD9EC7F7E5 /* ScoreService.swift */,
+			);
+			path = Scoring;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46B6754E1F46C01B52A91138 /* TiltRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6C3A294A48CED867283F915 /* Build configuration list for PBXNativeTarget "TiltRunner" */;
+			buildPhases = (
+				17667E1086F80A3864D5387B /* Sources */,
+				D5D1272FDF25579D4ABA41EF /* Resources */,
+				3631BC7FAFC88F5C83510C92 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TiltRunner;
+			packageProductDependencies = (
+				410E29CE0796999BB3398587 /* FirebaseFirestore */,
+			);
+			productName = TiltRunner;
+			productReference = 55F5A68459C143F124F42883 /* TiltRunner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EEC3C840EBD76DE602A280B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					46B6754E1F46C01B52A91138 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E836E29BF44BD1A7F29290C1 /* Build configuration list for PBXProject "TiltRunner" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EA50DCF1D253E80E58B16254;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 02AA6AFD3903167156435B4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46B6754E1F46C01B52A91138 /* TiltRunner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5D1272FDF25579D4ABA41EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B915DEB839424E8C3BE9A92 /* Assets.xcassets in Resources */,
+				69E881CE2A257A0FF61CE7B6 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17667E1086F80A3864D5387B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EC3BF5603E77FA2AAB387C /* GameController.swift in Sources */,
+				3B77A01805774DBAD2563743 /* GameOverView.swift in Sources */,
+				E61304DD51A0E138FBB15623 /* GamePlayView.swift in Sources */,
+				7027FF9ABE2F58F2924BD793 /* GameScene.swift in Sources */,
+				825189BE6B25A4986A391CBF /* GameViewRepresentable.swift in Sources */,
+				D3D7B7179BF41EE751B21A3E /* HUDView.swift in Sources */,
+				5684024C85028A8D534F9B1F /* LeaderboardView.swift in Sources */,
+				413736580B8F43E9FABC33D8 /* MainMenuView.swift in Sources */,
+				644CADAD8E17DDD7A775ACAD /* MotionManager.swift in Sources */,
+				CA62A70F7E2327B6969F25E2 /* Obstacle.swift in Sources */,
+				BC30F9101CAE5ADC90C1CE82 /* Player.swift in Sources */,
+				41B90C0A163D45A9A5F23759 /* Score.swift in Sources */,
+				6D9F502DE9EC979B22C08D62 /* ScoreService.swift in Sources */,
+				5DDE9AF16FDDA611057FCD3D /* TiltRunnerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8DB36A11A7F211FA2E0D40B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3SFJZ6BK2;
+				INFOPLIST_FILE = TiltRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aishanibal.TiltRunner;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BE609FFE45458EF761B4C23A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E3ADBD21D136386AA1ED16CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E73676D3C51F68BCCC9745C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3SFJZ6BK2;
+				INFOPLIST_FILE = TiltRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aishanibal.TiltRunner;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6C3A294A48CED867283F915 /* Build configuration list for PBXNativeTarget "TiltRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E73676D3C51F68BCCC9745C0 /* Debug */,
+				8DB36A11A7F211FA2E0D40B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E836E29BF44BD1A7F29290C1 /* Build configuration list for PBXProject "TiltRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE609FFE45458EF761B4C23A /* Debug */,
+				E3ADBD21D136386AA1ED16CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		410E29CE0796999BB3398587 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BC63F3AF3F306F8861C431F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8EEC3C840EBD76DE602A280B /* Project object */;
+}
