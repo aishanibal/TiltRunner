@@ -23,6 +23,7 @@ final class GameScene: SKScene {
     private var spawnInterval: TimeInterval = 1.2
     private var score: Int = 0
     private var isGameOver = false
+    private var isPausedGame = false
 
     private let steeringThreshold: Double = 0.2
     private let laneFractions: [CGFloat] = [1.0 / 6, 0.5, 5.0 / 6]
@@ -36,6 +37,7 @@ final class GameScene: SKScene {
         removeAllChildren()
         obstacles.removeAll()
         isGameOver = false
+        isPausedGame = false
         score = 0
         elapsedTime = 0
         lastUpdateTime = 0
@@ -51,8 +53,17 @@ final class GameScene: SKScene {
         addChild(player.node)
     }
 
+    func pauseGame() {
+        isPausedGame = true
+    }
+
+    func resumeGame() {
+        isPausedGame = false
+        lastUpdateTime = 0
+    }
+
     override func update(_ currentTime: TimeInterval) {
-        guard !isGameOver else { return }
+        guard !isGameOver, !isPausedGame else { return }
         guard lastUpdateTime != 0 else {
             lastUpdateTime = currentTime
             return
